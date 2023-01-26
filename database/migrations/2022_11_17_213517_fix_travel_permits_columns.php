@@ -14,7 +14,7 @@ class FixTravelPermitsColumns extends Migration
     public function up()
     {
         Schema::table('travel_permits', function (Blueprint $table) {
-            $table->string('status_pengiriman')->after('harga_beli')->default('Dalam Perjalanan');
+            $table->dropColumn('status_pengiriman');
         });
     }
 
@@ -25,6 +25,5 @@ class FixTravelPermitsColumns extends Migration
      */
     public function down()
     {
-        //
     }
 }
